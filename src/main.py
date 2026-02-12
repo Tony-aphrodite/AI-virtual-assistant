@@ -186,11 +186,15 @@ async def health_check() -> dict[str, str]:
     }
 
 
-# TODO: Import and include routers
-# from src.api.webhooks import twilio, whatsapp
-# from src.api.v1 import calls, voices, health
+# Import and include routers
+from src.api.webhooks import twilio
+
+app.include_router(twilio.router, prefix="/webhooks/twilio", tags=["Twilio Webhooks"])
+
+# TODO: Add more routers as they are implemented
+# from src.api.webhooks import whatsapp
+# from src.api.v1 import calls, voices
 #
-# app.include_router(twilio.router, prefix="/webhooks/twilio", tags=["Twilio"])
 # app.include_router(whatsapp.router, prefix="/webhooks/whatsapp", tags=["WhatsApp"])
 # app.include_router(calls.router, prefix="/api/v1/calls", tags=["Calls"])
 # app.include_router(voices.router, prefix="/api/v1/voices", tags=["Voices"])
