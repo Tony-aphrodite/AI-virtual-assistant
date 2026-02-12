@@ -119,6 +119,25 @@ services:
       - ai_assistant_network
     restart: unless-stopped
 
+  # Frontend (React)
+  frontend:
+    image: node:18-alpine
+    container_name: ai_assistant_frontend
+    working_dir: /app
+    command: sh -c "npm install && npm run dev"
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    depends_on:
+      - api
+    networks:
+      - ai_assistant_network
+    restart: unless-stopped
+
 volumes:
   postgres_data:
     driver: local
