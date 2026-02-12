@@ -1,0 +1,9 @@
+Necesito un generador de asistentes virtuales de IA.
+Que no sea un chatbot.
+Contestar llamadas telefónicas, correos electrónicos, contestar WhatsApp, y agendar reuniones.
+Si vosotros observáis alguna función a complementar genial.
+Necesito que cuando se le dé una orden de búsqueda, utilice todos los medios posibles y que realice el envío mediante correo electrónico o envíos de WhatsApp.
+Ejemplo: búsqueda de clínicas fisioterapia.
+Y envío de información.
+Necesito integrar el que le pueda grabar mi voz o la de algún empleado para que pueda hacer llamadas y recibirlas con normalidad.
+Según los datos que le metamos de informacion

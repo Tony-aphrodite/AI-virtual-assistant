@@ -1,0 +1,68 @@
+[tool.poetry]
+name = "ai-virtual-assistant"
+version = "0.1.0"
+description = "Enterprise-grade AI Virtual Assistant with phone, email, and WhatsApp integration"
+authors = ["AI Assistant Team <team@example.com>"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.109.0"
+uvicorn = {extras = ["standard"], version = "^0.27.0"}
+sqlalchemy = "^2.0.25"
+alembic = "^1.13.1"
+psycopg2-binary = "^2.9.9"
+redis = "^5.0.1"
+pydantic = "^2.5.3"
+pydantic-settings = "^2.1.0"
+python-dotenv = "^1.0.0"
+langchain = "^0.1.0"
+langchain-openai = "^0.0.2"
+openai = "^1.10.0"
+twilio = "^8.12.0"
+elevenlabs = "^0.2.26"
+asyncpg = "^0.29.0"
+google-api-python-client = "^2.115.0"
+google-auth-httplib2 = "^0.2.0"
+google-auth-oauthlib = "^1.2.0"
+python-multipart = "^0.0.6"
+httpx = "^0.26.0"
+aiofiles = "^23.2.1"
+celery = {extras = ["redis"], version = "^5.3.6"}
+structlog = "^24.1.0"
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+beautifulsoup4 = "^4.12.3"
+lxml = "^5.1.0"
+serpapi = "^0.1.5"
+python-docx = "^1.1.0"
+reportlab = "^4.0.9"
+pillow = "^10.2.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.4"
+pytest-asyncio = "^0.23.3"
+pytest-cov = "^4.1.0"
+black = "^24.1.1"
+isort = "^5.13.2"
+flake8 = "^7.0.0"
+mypy = "^1.8.0"
+pre-commit = "^3.6.0"
+httpx = "^0.26.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+target-version = ['py310']
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
