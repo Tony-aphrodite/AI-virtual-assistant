@@ -107,3 +107,5 @@ docker-compose.override.yml
 
 # Plans (Claude Code)
 .claude/plans/
+
+node_modules/

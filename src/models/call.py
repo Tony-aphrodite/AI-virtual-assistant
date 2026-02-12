@@ -71,7 +71,7 @@ class Call(BaseModel):
     transcription: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
 
     # Additional metadata (flexible JSON field)
-    metadata: Mapped[Optional[dict]] = mapped_column(JSON, nullable=True, default=dict)
+    call_metadata: Mapped[Optional[dict]] = mapped_column(JSON, nullable=True, default=dict)
 
     # Relationships
     conversations: Mapped[list["Conversation"]] = relationship(
